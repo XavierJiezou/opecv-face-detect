@@ -1,4 +1,5 @@
 【python】15行代码实现人脸检测（opencv）
+
 ----
 # 1. 项目简介
 利用opecv的python库，实现人脸检测。
@@ -36,3 +37,6 @@ if __name__ == "__main__":
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201225173149723.jpg#pic_center)
 # 7. 对比分析
 从**成果展示**图片来看，`alt`人脸检测的效果是最好的，`alt2`次之，`default`最差。
+# 8. 引用参考
+> [https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html](https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html)
+> [https://docs.opencv.org/master/d2/d99/tutorial_js_face_detection.html](https://docs.opencv.org/master/d2/d99/tutorial_js_face_detection.html)
