@@ -44,6 +44,7 @@ class FaceDetector(object):
             lbp_y = 2
         elif self.target == '3':
             img_dir = 'img/anime/'
+            haar_dir = None
             lbp_dir = 'data/lbpcascades/anime/'
             dst_dir = 'result/anime/'
             lbp_x = 1
