@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import cv2
 import os
+import time
 
 
 class FaceDetector(object):
@@ -70,12 +71,14 @@ class FaceDetector(object):
                 for each in os.listdir(_dir):
                     index+=1
                     cascade_name = _dir+each
+                    t1 = time.time()
                     result = self.face_detect(frame, cascade_name)
+                    t2 = time.time()
                     title = each.split('_')[-1][:-4]
                     save_name = dst_temp_dir+f'/{index}_{title}.jpg'
                     cv2.imwrite(save_name, cv2.cvtColor(result, cv2.COLOR_RGB2BGR))
                     plt.subplot(x, y, index)
-                    plt.title(title)
+                    plt.title(f'{title} {t2-t1:.2f}S')
                     plt.imshow(result)
                     plt.axis('off')
                 plt.savefig(f'{dst_path}{temp}.jpg', bbox_inches='tight')
