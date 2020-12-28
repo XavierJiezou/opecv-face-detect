@@ -1,7 +1,6 @@
 import cv2
 from tqdm import tqdm
 
-
 def face_detect(img, cascade_name):
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img_gray = cv2.equalizeHist(img_gray)
@@ -11,7 +10,6 @@ def face_detect(img, cascade_name):
         img = cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 255), 5)
     # cv2.imshow('Face detection', img)
     return img
-
 
 def video_detect(file_name, cascade_name):
     video = cv2.VideoCapture(file_name)  # 加载视频
@@ -28,4 +26,4 @@ def video_detect(file_name, cascade_name):
 
 
 if __name__ == "__main__":
-    video_detect('video/test.mp4', 'data/haarcascades/human/lbpcascade_animeface.xml')
+    video_detect('video/test.mp4', 'data/lbpcascades/anime/lbpcascade_animeface.xml')
