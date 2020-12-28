@@ -6,10 +6,6 @@ import time
 
 class FaceDetector(object):
     def __init__(self):
-        # if fname.endswith('.mp4'):
-        #     self.video = cv2.VideoCapture(fname)
-        # else:
-        #     self.frame = cv2.imread(fname)
         target = input('请选择检测对象: 1 人 2 猫 3 动漫 (默认1) ')
         self.target = target if target else '1'
 
@@ -23,17 +19,16 @@ class FaceDetector(object):
             frame = cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 5)
         return cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    
     def main(self):
         if self.target == '1':
             img_dir = 'img/human/'
             haar_dir = 'data/haarcascades/human/'
             lbp_dir = 'data/lbpcascades/human/'
             dst_dir = 'result/human/'
-            haar_x=2
-            haar_y=3
-            lbp_x=2
-            lbp_y=2
+            haar_x = 2
+            haar_y = 3
+            lbp_x = 2
+            lbp_y = 2
         elif self.target == '2':
             img_dir = 'img/cat/'
             haar_dir = 'data/haarcascades/cat/'
@@ -56,7 +51,8 @@ class FaceDetector(object):
         for item in os.listdir(img_dir):
             dst_path = dst_dir+item[:-4]
             os.makedirs(dst_path, exist_ok=True)
-            def show(_dir,x,y,temp):
+
+            def show(_dir, x, y, temp):
                 dst_temp_dir = dst_path+temp
                 os.makedirs(dst_temp_dir, exist_ok=True)
                 frame = cv2.imread(img_dir+item)
@@ -69,14 +65,15 @@ class FaceDetector(object):
                 plt.imshow(plt.imread(img_dir+item))
                 plt.axis('off')
                 for each in os.listdir(_dir):
-                    index+=1
+                    index += 1
                     cascade_name = _dir+each
                     t1 = time.time()
                     result = self.face_detect(frame, cascade_name)
                     t2 = time.time()
                     title = each.split('_')[-1][:-4]
                     save_name = dst_temp_dir+f'/{index}_{title}.jpg'
-                    cv2.imwrite(save_name, cv2.cvtColor(result, cv2.COLOR_RGB2BGR))
+                    cv2.imwrite(save_name, cv2.cvtColor(
+                        result, cv2.COLOR_RGB2BGR))
                     plt.subplot(x, y, index)
                     plt.title(f'{title} {t2-t1:.2f}S')
                     plt.imshow(result)
