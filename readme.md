@@ -77,8 +77,8 @@ pip install opencv-python
 ```
 
 # Usage
-1. put your pictures in the `img` foloder. E.g. if they are human images, put them in `img/human` path.
-2. run [face_detect.py](face_detect.py) and select your detection object.
+1. Put your pictures in the `img` foloder. E.g. if they are human images, put them in `img/human` path.
+2. Run [face_detect.py](face_detect.py) and select your detection object.
 3. Wait a few seconds, then view results in the `result` folder. E.g. if they are human images, the results are in `result/human` path.
 
 # For video detection
@@ -87,9 +87,9 @@ pip install opencv-python
 
 ![](https://img-blog.csdnimg.cn/20201228165341951.gif#pic_center)
 ## Usage
-1. open [video_detect.py](video_detect.py)
-2. edit the input arguments and select cascade `xml` file.
-3. run
+1. Open [video_detect.py](video_detect.py)
+2. Edit the input arguments and select cascade `xml` file.
+3. Run
 
 # Cite
 > [https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html](https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html)
