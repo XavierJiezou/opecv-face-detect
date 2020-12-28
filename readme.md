@@ -93,7 +93,7 @@ pip install opencv-python
 ## Demo
 > Full vieo: [https://www.bilibili.com/video/BV1hA411p7R9](https://www.bilibili.com/video/BV1hA411p7R9)
 
-![](https://img-blog.csdnimg.cn/20201228165341951.gif#pic_center)
+![](https://img-blog.csdnimg.cn/20201228165341951.gif)
 ## Usage
 1. Open [video_detect.py](video_detect.py)
 2. Edit the input arguments and select cascade `xml` file.
