@@ -91,7 +91,7 @@ pip install opencv-python
 
 # For video detection
 ## Demo
-> Full vieo: [https://www.bilibili.com/video/BV1hA411p7R9](https://www.bilibili.com/video/BV1hA411p7R9)
+> Full video: [https://www.bilibili.com/video/BV1hA411p7R9](https://www.bilibili.com/video/BV1hA411p7R9)
 
 ![](https://img-blog.csdnimg.cn/20201228165341951.gif)
 ## Usage
