@@ -32,8 +32,8 @@ class FaceDetector(object):
             dst_dir = 'result/human/'
             haar_x=2
             haar_y=3
-            lbp_x=1
-            lbp_y=4
+            lbp_x=2
+            lbp_y=2
         elif self.target == '2':
             img_dir = 'img/cat/'
             haar_dir = 'data/haarcascades/cat/'
