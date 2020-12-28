@@ -1,5 +1,5 @@
 # Introduce
-This is a face detection project based on opencv-python, which can detect the face of human, cat and anime characters.
+This is a face detection project based on **opencv-python**, which can detect the face of **human**, **cat** and **anime** characters.
 
 # Demo
 There are some examples for detection result.
