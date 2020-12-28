@@ -46,7 +46,7 @@ There are some examples for detection result.
 
 ![](result/cat/test_2/haar.jpg)
 
-- lbp
+- lbp (detect none)
 
 ![](result/cat/test_2/lbp.jpg)
 ### test_3
@@ -54,7 +54,7 @@ There are some examples for detection result.
 
 ![](result/cat/test_3/haar.jpg)
 
-- lbp
+- lbp (detect none)
 
 ![](result/cat/test_3/lbp.jpg)
 ## Anime
