@@ -79,3 +79,7 @@ if __name__ == "__main__":
 > [【python】15行代码实现动漫脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831797)
 
 ![](https://img-blog.csdnimg.cn/20201228103025477.jpg#pic_center)
+
+> [【python】30行代码实现视频中的人脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111870163)
+
+![](https://img-blog.csdnimg.cn/20201228165341951.gif#pic_center)
