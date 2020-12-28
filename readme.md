@@ -75,7 +75,7 @@ There are some examples for detection result.
 According to the detection result:
 - For human face detection, `haarcascade_frontalface_alt.xml` is recommended.
 - For cat face detection, `haarcascade_frontalcatface.xml` is recommended.
-- For Anime face detection, `lbpcascade_animeface.xml` is the only choice.
+- For anime face detection, `lbpcascade_animeface.xml` is the only choice.
 But if shorter time is what you want rather than precision, you can choose the lbp acascades files.
 
 # Install
