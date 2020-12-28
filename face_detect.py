@@ -79,7 +79,6 @@ class FaceDetector(object):
                     plt.imshow(result)
                     plt.axis('off')
                 plt.savefig(f'{dst_path}{temp}.jpg', bbox_inches='tight')
-                # plt.show()
             if haar_dir:
                 show(haar_dir, haar_x, haar_y, '/haar')
             if lbp_dir:
