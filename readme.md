@@ -1,84 +1,83 @@
-【python】15行代码实现人脸检测（opencv）
+# Introduce
+This is a face detection project based on opencv-python, which can detect the face of human, cat and anime characters.
 
-----
-# 1. 项目简介
-利用**opecv**的**python**库及训练好的**级联分类器**实现人脸检测。
-# 2. 项目地址
-> [https://github.com/XavierJiezou/opecv-face-detect](https://github.com/XavierJiezou/opecv-face-detect)
-# 3. 依赖模块
+# Demo
+There are some examples for detection result.
+
+## Human
+### test_1
+- haar
+
+![](result/human/test_1/haar.jpg)
+
+- lbp
+
+![](result/human/test_1/lbp.jpg)
+
+### test_2
+- haar
+
+![](result/human/test_2/haar.jpg)
+
+- lbp
+
+![](result/human/test_3/lbp.jpg)
+
+### test_3
+- haar
+
+![](result/human/test_3/haar.jpg)
+
+- lbp
+
+![](result/human/test_3/lbp.jpg)
+
+## Cat
+### test_1
+- haar
+
+![](result/cat/test_1/haar.jpg)
+
+- lbp
+
+![](result/cat/test_1/lbp.jpg)
+### test_2
+- haar
+
+![](result/cat/test_2/haar.jpg)
+
+- lbp
+
+![](result/cat/test_2/lbp.jpg)
+### test_3
+- haar
+
+![](result/cat/test_3/haar.jpg)
+
+- lbp
+
+![](result/cat/test_3/lbp.jpg)
+## Anime
+### test_1
+- lbp (only)
+
+![](result/anime/test_1/lbp.jpg)
+### test_2
+- lbp (only)
+
+![](result/anime/test_2/lbp.jpg)
+### test_3
+- lbp (only)
+
+![](result/anime/test_3/lbp.jpg)
+
+# Install
 ```bash
 pip install opencv-python
 ```
-# 4. 完整代码
-```python
-import cv2
 
-def face_detect(file_name, cascade_name):
-    img = cv2.imread(file_name) # 读取图片
-    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # 图片灰度化
-    img_gray = cv2.equalizeHist(img_gray) # 直方图均衡化
-    face_cascade = cv2.CascadeClassifier(cascade_name) # 加载级联分类器
-    faces = face_cascade.detectMultiScale(img) # 多尺度检测
-    for (x, y, w, h) in faces: # 遍历所有检测到的人脸
-        img = cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 255), 5) # 绘制矩形框
-    cv2.imshow('Face detection', img) # 检测效果预览
-    cv2.waitKey(0) # 保持窗口显示
+# Usage
+1. put your pictures in the `img` foloder. E.g. if they are human images, put them in `img/human` path.
+2. run [face_detect.py](face_detect.py) and select your detection object.
+3. Wait a few seconds, then view results in the `result` folder. E.g. if they are human images, the results are in `result/human` path.
 
-if __name__ == "__main__":
-    face_detect('test.jpg', 'haarcascade_frontalface_alt.xml')
-```
-# 5. 必要组件
-**opencv**官方提供了**8**个已经训练好的人脸级联分类文件：
-## 5.1. haar级联特征分类器（精度高）
-- `haarcascade_frontalface_default.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_default.xml)
-- `haarcascade_frontalface_alt.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_alt.xml)
-
-- `haarcascade_frontalface_alt2.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_alt2.xml)
-- `haarcascade_frontalface_alt_tree.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_alt_tree.xml)
-- `haarcascade_profileface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_profileface.xml)
-## 5.2. lbp级联特征分类器（速度快）
-- `lbpcascade_frontalface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/lbpcascades/human/lbpcascade_frontalface.xml)
-- `lbpcascade_frontalface_improved.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/lbpcascades/human/lbpcascade_frontalface_improved.xml)
-- `lbpcascade_profileface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/lbpcascades/human/lbpcascade_profileface.xml)
-----
-`frontalface`对正脸检测效果好，`profileface`专门针对侧脸进行检测。一般来说，`haar`特征检测精度更高，而`lbp`特征检测用时更短。
-# 6. 成果展示
-## 6.1. 测试样例1
-- **haar**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228095556968.jpg?x-oss-process=image,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTUxNTYw,size_16,color_FFFFFF,t_70#pic_center)
-- **lbp**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228095608844.jpg?x-oss-process=image,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTUxNTYw,size_16,color_FFFFFF,t_70#pic_center)
-##  6.2. 测试样例2
-- **haar**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020122809565139.jpg?x-oss-process=image,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTUxNTYw,size_16,color_FFFFFF,t_70#pic_center)
-- **lbp**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228095701851.jpg?x-oss-process=image,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTUxNTYw,size_16,color_FFFFFF,t_70#pic_center)
-
-## 6.3. 测试样例3
-- **haar**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228095717575.jpg?x-oss-process=image,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTUxNTYw,size_16,color_FFFFFF,t_70#pic_center)
-- **lbp**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228095725904.jpg?x-oss-process=image,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTUxNTYw,size_16,color_FFFFFF,t_70#pic_center)
-
-# 7. 对比分析
-从测试结果来看，`haar`级联特征的`alt`人脸检测的精度是最高的，其次就是`alt2`，但如果对精度要求不高，可以采用`lbp`级联特征检测，因为这个花费的时间很短。
-# 8. 引用参考
-> [https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html](https://docs.opencv.org/master/db/d28/tutorial_cascade_classifier.html)
-> [https://docs.opencv.org/master/d2/d99/tutorial_js_face_detection.html](https://docs.opencv.org/master/d2/d99/tutorial_js_face_detection.html)
-
-# 9. 相关推荐
-> [【python】15行代码实现猫脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831532)
-
-![](https://img-blog.csdnimg.cn/20201228102022683.jpg#pic_center)
-> [【python】15行代码实现动漫人脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831797)
-
-![](https://img-blog.csdnimg.cn/20201228103025477.jpg#pic_center)
-> [【python】30行代码实现视频中的动漫人脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111870163)
-
-![](https://img-blog.csdnimg.cn/20201228165341951.gif#pic_center)
