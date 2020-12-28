@@ -74,4 +74,8 @@ if __name__ == "__main__":
 
 # 9. 相关推荐
 > [【python】15行代码实现猫脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831532)
+
+![](https://img-blog.csdnimg.cn/20201228103025477.jpg#pic_center)
 > [【python】15行代码实现动漫脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831797)
+
+![](https://img-blog.csdnimg.cn/20201228102022683.jpg#pic_center)
