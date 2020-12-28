@@ -30,16 +30,16 @@ if __name__ == "__main__":
 # 5. 必要组件
 **opencv**官方提供了**8**个已经训练好的人脸级联分类文件：
 ## 5.1. haar级联特征分类器（精度高）
-- `haarcascade_frontalface_default.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/haarcascade_frontalface_default.xml)
-- `haarcascade_frontalface_alt.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/haarcascade_frontalface_alt.xml)
+- `haarcascade_frontalface_default.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_default.xml)
+- `haarcascade_frontalface_alt.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_alt.xml)
 
-- `haarcascade_frontalface_alt2.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/haarcascade_frontalface_alt2.xml)
-- `haarcascade_frontalface_alt_tree.xml`：[点击下载](https://cdn.jsdelivr.net/gh/opencv/opencv@master/data/haarcascades/haarcascade_frontalface_alt_tree.xml)
-- `haarcascade_profileface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/opencv/opencv@master/data/haarcascades/haarcascade_profileface.xml)
+- `haarcascade_frontalface_alt2.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_alt2.xml)
+- `haarcascade_frontalface_alt_tree.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_frontalface_alt_tree.xml)
+- `haarcascade_profileface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/haarcascades/human/haarcascade_profileface.xml)
 ## 5.2. lbp级联特征分类器（速度快）
-- `lbpcascade_frontalface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/opencv/opencv@master/data/lbpcascades/lbpcascade_frontalface.xml)
-- `lbpcascade_frontalface_improved.xml`：[点击下载](https://cdn.jsdelivr.net/gh/opencv/opencv@master/data/lbpcascades/lbpcascade_frontalface_improved.xml)
-- `lbpcascade_profileface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/opencv/opencv@master/data/lbpcascades/lbpcascade_profileface.xml)
+- `lbpcascade_frontalface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/lbpcascades/human/lbpcascade_frontalface.xml)
+- `lbpcascade_frontalface_improved.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/lbpcascades/human/lbpcascade_frontalface_improved.xml)
+- `lbpcascade_profileface.xml`：[点击下载](https://cdn.jsdelivr.net/gh/XavierJiezou/opecv-face-detect@master/data/lbpcascades/human/lbpcascade_profileface.xml)
 ----
 `frontalface`对正脸检测效果好，`profileface`专门针对侧脸进行检测。一般来说，`haar`特征检测精度更高，而`lbp`特征检测用时更短。
 # 6. 成果展示
@@ -76,10 +76,9 @@ if __name__ == "__main__":
 > [【python】15行代码实现猫脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831532)
 
 ![](https://img-blog.csdnimg.cn/20201228102022683.jpg#pic_center)
-> [【python】15行代码实现动漫脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831797)
+> [【python】15行代码实现动漫人脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111831797)
 
 ![](https://img-blog.csdnimg.cn/20201228103025477.jpg#pic_center)
-
 > [【python】30行代码实现视频中的动漫人脸检测（opencv）](https://blog.csdn.net/qq_42951560/article/details/111870163)
 
 ![](https://img-blog.csdnimg.cn/20201228165341951.gif#pic_center)
